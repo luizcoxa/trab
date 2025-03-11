@@ -1,0 +1,277 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+}
+
+/* Barra de Navegação */
+header {
+    background-color: #000; /* Cor de fundo preta */
+    padding: 10px 30px; /* Maior espaçamento */
+    display: flex;
+    justify-content: space-between; /* Espaço entre logo e itens de navegação */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave e mais intensa */
+    height: 70px;
+}
+
+/* Estilo para a logo e nome da empresa */
+header .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha a logo e nome à esquerda */
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 0;
+    object-fit: cover;
+    filter: brightness(0) saturate(100%) invert(27%) sepia(91%) saturate(704%) hue-rotate(358deg) brightness(102%) contrast(104%); /* Logo vermelha */
+}
+
+header .company-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Deixando mais grosso */
+    color: #ff0000; /* Logo vermelha */
+    font-size: 1.8rem; /* Tamanho de fonte maior */
+    letter-spacing: 2px; /* Espaçamento nas letras */
+    text-transform: uppercase; /* Deixa o texto em caixa alta */
+    white-space: nowrap; /* Evita quebra de linha */
+    transition: color 0.3s ease-in-out;
+    margin-left: 15px;
+}
+
+header .company-name:hover {
+    color: #f1f1f1; /* Cor mais clara no hover */
+}
+
+/* Estilo para os itens de navegação */
+nav ul {
+    display: flex;
+    gap: 20px; /* Espaço entre os itens de navegação */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #fff; /* Cor do texto dos links */
+    font-size: 1rem;
+    padding: 10px 20px; /* Ajuste o tamanho do botão */
+    border-radius: 25px; /* Bordas arredondadas */
+    background-color: #000; /* Fundo preto */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efeito de hover nos links */
+nav ul li a:hover {
+    background-color: #ff0000; /* Cor vermelha no hover */
+    transform: translateY(-5px);
+}
+
+/* Efeito de clique (active) nos links */
+nav ul li a:active {
+    background-color: #d50000; /* Cor mais intensa no clique */
+    transform: translateY(0px); /* Retira a elevação do botão no clique */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais forte para o clique */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        height: 60px;
+    }
+
+    .company-name {
+        font-size: 1.4rem;
+    }
+
+    nav ul {
+        gap: 10px; /* Ajuste para maior responsividade */
+    }
+
+    nav ul li a {
+        padding: 6px 15px; /* Ajusta o espaçamento nos botões */
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+    }
+}
+
+/* Seção de Promoção */
+#promo {
+    padding: 6rem 0;
+    text-align: center;
+    background-color: #000000;
+    color: #7d48af;
+    /* background-image: url('img/Design\ sem\ nome\ \(11\).png'); */
+    background-size: cover;
+    background-position: center center;
+    /* background-attachment: fixed; */
+}
+
+.promo-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Cor branca para o título */
+    font-weight: bold;
+}
+
+.promo-description {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: #ffffff; /* Cor de texto branca */
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.promo-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000; /* Cor de destaque no preço */
+}
+
+.promo-product {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.promo-product img {
+    width: 800px; /* Aumentando o tamanho da imagem */
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.promo-product h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ecf0f1; /* Cor clara para o título do produto */
+}
+
+.promo-product p {
+    font-size: 1.4rem;
+    color: #ecf0f1; /* Cor clara para a descrição do produto */
+}
+
+/* Estilo para a seção de contato */
+#contact {
+    background: 
+        linear-gradient(90deg, rgb(10, 0, 0), rgba(255, 0, 0, 0.7), rgba(236, 36, 1, 0.7)),
+        url('img/Design\ sem\ nome\ \(11\).png'); /* Caminho da sua imagem */
+    background-size: cover; /* A imagem de fundo vai cobrir toda a área */
+    background-position: center center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Fixa a imagem enquanto a página rola */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Resto do estilo permanece igual */
+.main-content {
+    max-width: 800px;
+    width: 80%; /* Define a largura para 80% */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.intro-text-content h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha ao centro */
+    width: 100%;
+}
+
+.contact-form form {
+    width: 100%;
+    max-width: 600px; /* Limita a expansão lateral */
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%; /* Ajusta para ocupar 100% da largura do container */
+    max-width: 800px; /* Limita a expansão lateral */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    width: 100%;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+#message {
+    resize: vertical; /* Permite redimensionamento apenas na vertical */
+}
+
+.form-group button {
+    background-color: #000; /* Cor preta para o botão */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #333;
+}
